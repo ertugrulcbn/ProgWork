@@ -2,7 +2,7 @@
 
 
 
-1-)[sayac.html](https://ertugrulcbn.github.io/Progwork/sayac.html)
+1-)[sayac.html](https://ertugrulcbn.github.io/ProgWork/sayac.html)
 
 2-)[Array%Demo.html](https://ertugrulcbn.github.io/ProgWork/Array%20Demo.html)
 
