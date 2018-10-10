@@ -6,7 +6,7 @@
 
 2-)[Array%Demo.html](https://ertugrulcbn.github.io/ProgWork/Array%20Demo.html)
 
-3-)[Array%Demo.html](https://ertugrulcbn.github.io/ProgWork/inspector.html)
+3-)[inspector.html](https://ertugrulcbn.github.io/ProgWork/inspector.html)
 
 
 
