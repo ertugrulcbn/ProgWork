@@ -4,5 +4,5 @@
 
 1-)[sayac.html](https://ertugrulcbn.github.io/Progwork/sayac.html)
 
-2-)[Array%Demo.html](https://ertugrulcbn.github.io/Progwork/Array%Demo.html)
+2-)[Array%Demo.html](https://ertugrulcbn.github.io/ProgWork/Array%20Demo.html)
 
