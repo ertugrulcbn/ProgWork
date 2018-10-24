@@ -7,7 +7,7 @@
           rel="stylesheet" media="all">
     <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
     <script src="Database.js"></script>
-    <title>Sefercan Aydas CW4</title>
+    <title>CW4</title>
 </head>
 
 <body>
@@ -18,6 +18,20 @@
 
 <script>
     "use strict";
+    class Distance{
+      constructor(km=0) {
+          this.km = Math.round(km);
+        }
+        get mile() {
+          return Math.round(this.km * 0.621371192);
+        }
+        set mile(value=32) {
+          this.km = Math.round(this.mile * 1.609344);
+        }
+        toString(){
+            return this.km+" km";
+        }
+    }
     class Point {
         constructor(x,y){
             this.x=x;
@@ -36,39 +50,23 @@
             return "("+this.x+","+this.y+","+this.z+")";
         }
     }
-    class Distance{
-      constructor(km=0) {
-          this.km = Math.round(km);
-        }
-        get mile() {
-          return Math.round(this.km * 0.621371192);
-        }
-        set mile(value=32) {
-          this.km = Math.round(this.mile * 1.609344);
-        }
-        toString(){
-            return this.km+" km";
-        }
-    }
     class CW4 extends Menu{
       constructor(){
         super();
-        this.course = new Course("BLM305","09:00","26.10.2018");
-        this.point = new Point(4,7);
-        this.point3D= new Point3D(4,7,8);
-        this.distance = new Distance(300)
-        this.student= new Student(1521221036,"Sefercan",3.27);
+        this.course = new Course("BLM305","12:00","04.04.2018");
+        this.point = new Point(8,10);
+        this.point3D= new Point3D(5,2,1);
+        this.distance = new Distance(1000);
+        this.student= new Student(1521221121,"Ertugrul",2.20);
       }
     }
     function init() {
-        let menu;
-        menu = new CW4(); //global
-        display(menu);
+        MENU = new CW4();
+        display(MENU);
     }
     docName.innerText = "Inspector "+VERSION;
     try {
-        inspect(document.body, init); //makes the table
-        //inp.value = "new Number(c.pi)";
+        inspect(document.body, init);
     } catch(e) {
         reportError(e);
     }
@@ -76,8 +74,8 @@
 
 <p><input type=file multiple onChange='fileSelect(this)' />
 </p><p>
-    <a href="https://sfrcnayds.github.io/JSHomeworks/Array%20Demo.html">HW1</a> &emsp;
-    <a href="https://sfrcnayds.github.io/JSHomeworks/c4_data.html">CW3</a>
+    <a href="https://ertugrulcbn.github.io/ProgWork/sayac.html">Char Sayac</a> &emsp;
+    <a href="https://ertugrulcbn.github.io/ProgWork/c4_data.html">CW3</a>
 </p>
 <pre id=disp1></pre>
 <img id=disp2 />
