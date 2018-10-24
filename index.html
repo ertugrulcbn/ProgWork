@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://maeyler.github.io/JS/sss/inspector.css"
+          rel="stylesheet" media="all">
+    <script src="https://maeyler.github.io/JS/sss/inspector.js"></script>
+    <script src="Database.js"></script>
+    <title>Sefercan Aydas CW4</title>
+</head>
+
+<body>
+<p><b id=docName></b> &nbsp;
+    <a href="https://maeyler.github.io/JS/sss/">Read me</a> &nbsp;
+    <a href="https://maeyler.github.io/JS/sss/Turkish">Turkish</a>
+</p>
+
+<script>
+    "use strict";
+    class Point {
+        constructor(x,y){
+            this.x=x;
+            this.y=y;
+        }
+        toString(){
+            return "("+this.x+","+this.y+")";
+        }
+    }
+    class Point3D extends Point {
+        constructor(x,y,z){
+           super(x,y);
+           this.z = z;
+        }
+        toString(){
+            return "("+this.x+","+this.y+","+this.z+")";
+        }
+    }
+    class Distance{
+      constructor(km=0) {
+          this.km = Math.round(km);
+        }
+        get mile() {
+          return Math.round(this.km * 0.621371192);
+        }
+        set mile(value=32) {
+          this.km = Math.round(this.mile * 1.609344);
+        }
+        toString(){
+            return this.km+" km";
+        }
+    }
+    class CW4 extends Menu{
+      constructor(){
+        super();
+        this.course = new Course("BLM305","09:00","26.10.2018");
+        this.point = new Point(4,7);
+        this.point3D= new Point3D(4,7,8);
+        this.distance = new Distance(300)
+        this.student= new Student(1521221036,"Sefercan",3.27);
+      }
+    }
+    function init() {
+        let menu;
+        menu = new CW4(); //global
+        display(menu);
+    }
+    docName.innerText = "Inspector "+VERSION;
+    try {
+        inspect(document.body, init); //makes the table
+        //inp.value = "new Number(c.pi)";
+    } catch(e) {
+        reportError(e);
+    }
+</script>
+
+<p><input type=file multiple onChange='fileSelect(this)' />
+</p><p>
+    <a href="https://sfrcnayds.github.io/JSHomeworks/Array%20Demo.html">HW1</a> &emsp;
+    <a href="https://sfrcnayds.github.io/JSHomeworks/c4_data.html">CW3</a>
+</p>
+<pre id=disp1></pre>
+<img id=disp2 />
+
+</body>
+</html>
