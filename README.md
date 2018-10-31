@@ -14,4 +14,4 @@
 
 6-)[CW4.html](https://ertugrulcbn.github.io/ProgWork/index.html)
 
-7-)[Database.html](https://ertugrulcbn.github.io/ProgWork/HW2/Database.html)
+7-)[HW2](https://ertugrulcbn.github.io/ProgWork/HW2/Database.html)
