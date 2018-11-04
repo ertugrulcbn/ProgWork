@@ -12,7 +12,7 @@
 
 5-)[HW1.html](https://ertugrulcbn.github.io/ProgWork/HW1.html)
 
-6-)[CW4.html](https://ertugrulcbn.github.io/ProgWork/index.html)
+6-)[CW4.html](https://ertugrulcbn.github.io/ProgWork/index1.html)
 
 7-)[HW2](https://ertugrulcbn.github.io/ProgWork/HW2/Database.html)
 
