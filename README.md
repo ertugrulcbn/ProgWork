@@ -18,4 +18,4 @@
 
 8-)[CW5](https://ertugrulcbn.github.io/ProgWork/CW5/File.html)
 
-9-)[CW6](https://ertugrulcbn.github.io/ProgWork/CW6/File.html)
+9-)[CW6](https://ertugrulcbn.github.io/ProgWork/CW6/Timing.html)
