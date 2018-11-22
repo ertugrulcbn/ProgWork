@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8" />
-<title> Animates</title>
+<title>Animates</title>
  
  
 </head>
@@ -11,7 +11,7 @@
 
 <script>
 var looper;
-var degrees = 0;
+var degrees =0;
 function rotateAnimation(el,speed){
 	var elem = document.getElementById(el);
 	if(navigator.userAgent.match("Chrome")){
@@ -33,38 +33,20 @@ function rotateAnimation(el,speed){
 	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
 }
 </script>
-
-
+   
 <img id="img1"width="300" height="300" src="taz.png" alt="taz size="10 px">
-<script>rotateAnimation("img1",30);</script>
-<h2 style="width:200px;" id="status"></h2>
+<input type=button value="Rotate Taz" onClick="rotateAnimation('img1',30);">
+<input type=button value="Create Colored Boxes " onClick="oynat()">
+<h1 style="width:200px;" id="status"></h1>
 
-
-
-
-
-
-
-
-
- 
 <style>
 div {
 width: 20px;
 height: 20px;
 float: left;
 }
- 
-button {
-position: absolute;
-top: 20px;
-left: 20px;
-}
-#stop {
-left: 100px;
-} 
 </style>
- 
+
 <script> 
  
 var animateFrameId;
@@ -76,14 +58,11 @@ var renk1= Math.floor(255*Math.random());
 var renk2= Math.floor(255*Math.random());
 var renk3= Math.floor(255*Math.random());
 element.style.backgroundColor="rgb("+renk1+","+renk2+","+renk3+")";
- 
- 
 animateFrameId = requestAnimationFrame(oynat);
  
 }
-animateFrameId = requestAnimationFrame(oynat);
- 
+
 </script>
- 
+
 </body>
 </html>
