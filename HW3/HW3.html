@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title> Animates</title>
+ 
+ 
+</head>
+ 
+<body>
+
+<script>
+var looper;
+var degrees = 0;
+function rotateAnimation(el,speed){
+	var elem = document.getElementById(el);
+	if(navigator.userAgent.match("Chrome")){
+		elem.style.WebkitTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Firefox")){
+		elem.style.MozTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("MSIE")){
+		elem.style.msTransform = "rotate("+degrees+"deg)";
+	} else if(navigator.userAgent.match("Opera")){
+		elem.style.OTransform = "rotate("+degrees+"deg)";
+	} else {
+		elem.style.transform = "rotate("+degrees+"deg)";
+	}
+	looper = setTimeout('rotateAnimation(\''+el+'\','+speed+')',speed);
+	degrees++;
+	if(degrees > 359){
+		degrees = 1;
+	}
+	document.getElementById("status").innerHTML = "rotate("+degrees+"deg)";
+}
+</script>
+</head>
+<body>
+<img id="img1"width="300" height="300" src="taz.png" alt="taz size="10 px">
+<script>rotateAnimation("img1",30);</script>
+<h2 style="width:200px;" id="status"></h2>
+
+</div>
+
+
+
+
+
+
+
+ 
+<style>
+div {
+width: 20px;
+height: 20px;
+float: left;
+}
+ 
+button {
+position: absolute;
+top: 20px;
+left: 20px;
+}
+#stop {
+left: 100px;
+} 
+</style>
+ 
+<script> 
+ 
+var animateFrameId;
+function oynat() {
+ 
+var element= document.createElement("div");
+document.body.appendChild(element); 
+var renk1= Math.floor(255*Math.random());
+var renk2= Math.floor(255*Math.random());
+var renk3= Math.floor(255*Math.random());
+element.style.backgroundColor="rgb("+renk1+","+renk2+","+renk3+")";
+ 
+ 
+animateFrameId = requestAnimationFrame(oynat);
+ 
+}
+animateFrameId = requestAnimationFrame(oynat);
+ 
+</script>
+ 
+</body>
+</html>
