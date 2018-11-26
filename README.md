@@ -24,6 +24,6 @@
 
 10-)[HW3](https://ertugrulcbn.github.io/ProgWork/HW3/HW3.html)
 
-11-)[HW4](https://ertugrulcbn.github.io/ProgWork/HW4/HW4.html)
+11-)[HW4](https://ertugrulcbn.github.io/ProgWork/HW4/index.html)
 
 
