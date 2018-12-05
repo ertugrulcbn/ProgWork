@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>SVG and Canvas </title>
+
+  <style>
+    svg, canvas {
+        background: cyan;
+        font: 10px arial, sans-serif;
+    }
+    input{
+		width: 50px;
+	}
+  </style>
+</head>
+
+<body>
+<div style="float:left;">
+<p>Circle fill color    :<input id="circleFill" type="color" value="#ff0000"> </p>
+<p>Circle stroke color 	:<input id="circleStroke" type="color" value="#ff0000"></p>
+<p>Circle text color    :<input id="circleText" type="color" value="#ff0000"></p>
+<p>Rect fill color      :<input id="rectFill" type="color" value="#ff0000"></p>
+<p>Rect stroke color    :<input id="rectStroke" type="color" value="#ff0000"></p>
+<p>Rect text color 	:<input id="rectText" type="color" value="#ff0000"></p>
+<p>SVG Background Color :<input id="svgColor" type="color" value="#ff0000"></p>
+</div>
+<div style="float:left">
+<p>Circle Radius	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input type="number" value=10 onchange="circleRadius(this)"></p>
+<p>Circle Stroke Width	:<input type="number" value=5 onchange="circleStrokeWidth(this)"></p>
+<p>Rect Stroke Width&nbsp;&nbsp;	:<input type="number" value=10 onchange="rectStrokeWidth(this)"></p>
+<p>Rectangle Y change               : <input type="number" value=12 onchange="rectY(this)"></p>
+<p>Rectangle X change              : <input type="number" value=50 onchange="rectX(this)"></p>
+</div>
+<h2>Using SVG</h2>
+<svg id='svg' width='340' height='100'>
+  <circle id="circle" cx='50' cy='50' r='40'
+  style='fill:yellow;stroke:blue;stroke-width:4' />
+  <text id="txtCircle" x='35' y='55' fill='black'>Circle</text>
+  <rect id="rect" x='110' y='10' width='100' height='80'
+  style='fill:pink;stroke:red;stroke-width:5' />
+  <text id="txtRect" x='145' y='55' fill='blue'>Rect</text>
+</svg>
+<p>SVG elements are controllable and scalable</p>
+
+
+<p>Ref: <i>Eloquent JavaScript</i>,
+<a href="http://eloquentjavascript.net/17_canvas.html" 
+   target="ExternalDocument"> Chap 17</a>
+</p>
+
+<script>
+"use strict";
+  
+    function circleStrokeWidth(k){
+	circle.style.strokeWidth=k.value;
+    }
+    function rectStrokeWidth(k){
+     rect.style.strokeWidth=k.value;
+    }
+    function circleRadius(k){
+     circle.setAttribute("r",k.value);
+    }
+    circleFill.addEventListener("change", circleFillEvent, false);
+    function circleFillEvent(event) {
+        circle.style.fill=event.target.value;
+    }
+    circleStroke.addEventListener("change", circleStrokeEvent, false);
+    function circleStrokeEvent(event) {
+        circle.style.stroke=event.target.value;
+    }
+    rectFill.addEventListener("change", rectFillEvent, false);
+    function rectFillEvent(event) {
+        rect.style.fill=event.target.value;
+    }
+    rectStroke.addEventListener("change", rectStrokeEvent, false);
+    function rectStrokeEvent(event) {
+        rect.style.stroke=event.target.value;
+    }
+    circleText.addEventListener("change", circleTextEvent, false);
+    function circleTextEvent(event) {
+        txtCircle.style.fill=event.target.value;
+    }
+    rectText.addEventListener("change", rectTextEvent, false);
+    function rectTextEvent(event) {
+        txtRect.style.fill=event.target.value;
+    }
+    svgColor.addEventListener("change", svgColorEvent, false);
+    function svgColorEvent(event) {
+        svg.style.background=event.target.value;
+    }
+	function rectX(k){
+       rect.setAttribute("x",k.value);
+    }
+     function rectY(k){
+       rect.setAttribute("y",k.value); 
+    }
+</script>
+
+</body>
+</html>
+
