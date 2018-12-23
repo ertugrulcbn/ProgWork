@@ -19,11 +19,29 @@ body{  background-color:#FFEFD5	;
 </style>
 	</head>
 <body> <h1 style="color:#FF7F50; font-weight: bold;"align="center"> Tic Tac Toe </h1>
-		<div align="center" id="tictactoe"></div>
-		<div align="center">
-			<span style="color:#FF7F50; font-weight: bold; font-size:25px" id='turn'>Player X</span>
+		
+		<div align="center" id="tictactoe">
+		
+		
+		
+		
 		</div>
-<script> 
+		<div align="center">
+		
+		
+		
+		
+			<span style="color:#FF7F50; font-weight: bold; font-size:25px" id='turn'>Player X</span>
+		</div></br>
+		<div style="color:#FF7F50; font-weight: bold; font-size:25px" align="center" id="gscore">--Scores--
+		
+		<p style="color:#FF7F50; font-weight: bold; font-size:25px" id="xScore">Player X : Score</p>
+		<p style="color:#FF7F50; font-weight: bold; font-size:25px" id="oScore">Player O : Score</p>
+		
+		</div>
+<script>
+ var xScore=0;
+  var oScore=0;
   var N_SIZE = 3,
   EMPTY = '&nbsp;',
   boxes = [],
@@ -94,7 +112,9 @@ function win(clicked) {
     var items = contains('#tictactoe ' + testClass, turn);
     // winning condition: turn == N_SIZE
     if (items.length == N_SIZE) {
-      return true;
+      
+
+	  return true;
     }
   }
   return false;
@@ -121,7 +141,16 @@ function set() {
   moves += 1;
   score[turn] += this.identifier;
   if (win(this)) {
+    
     alert('Winner: Player ' + turn);
+	if(turn=='X'){
+	xScore++;
+	document.getElementById('xScore').textContent = 'Player X :  ' +xScore;
+	
+	;}
+	else if( turn=='O'){ oScore++;
+	document.getElementById('oScore').textContent = 'Player O :  ' +oScore;}
+	
     startNewGame();
   } else if (moves === N_SIZE * N_SIZE) {
     alert('Draw');
