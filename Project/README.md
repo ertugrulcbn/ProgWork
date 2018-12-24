@@ -10,6 +10,8 @@ Kazanan: Oyuncu O
 Yeniden Çizim
 ## Kurallar
 1-)Html fonsiyonları ile oyun alanı için tablo satır ve sütunları oluşturulur. Tablo oluştuğunda  3x3 boyutunda bir kutucuk meydana gelir.
+
 2-)İlk oyuncu olarak X karakteri başlar.
+
 3-)İlk oyuncuya sembolünü istediği yere çizer. Sonra ikinci oyuncu başka bir kutuya kendi sembolünü çizer. Oyunun amacı kendi sembolünüzü arka arkaya yerleştirmek ve rakibinizin bunu yapmasını engellemektir.  Kareler dolduğunda kimse sembolünü arka arkaya sıralayamadıysa oyun beraberedir.  Oyuncular berabere kaldığında yeniden başlar ve bunun skora bir katkısı yoktur.
 
